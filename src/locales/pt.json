@@ -1,0 +1,392 @@
+{
+  "block_home_view": {
+    "title": "Analise seu texto conforme escreve :)",
+    "character_limit": "Definir Limite de Caracteres",
+    "last_edit": "Última edição em",
+    "show_analyze_text_with_ai": "Mostrar Análise de Texto com IA",
+    "uses_today": "usos hoje",
+    "error": "Erro ao processar texto.",
+    "limit_reached": "Você atingiu o limite diário de uso da IA.",
+    "analysis_not_available": "Análise não disponível",
+    "loading": "Carregando...",
+    "ai_analysis": "Análise de Texto com IA",
+    "processing": "Processando...",
+    "text_too_long": "Texto muito longo",
+    "time_estimated_of_reading": "Tempo estimado de leitura",
+    "info_openai_usage": "Este site utiliza a API da OpenAI. Todas as respostas são geradas pelo modelo GPT-4o-mini. Por favor, não insira dados pessoais ao analisar seu texto, nem conteúdos inadequados ou inapropriados. Obrigado por utilizar o Speedchars!",
+    "input_block": {
+      "placeholder": "Digite o texto para analisar... (Ou cole)"
+    },
+    "input_with_btn": {
+      "placeholder": "Digite o limite de caracteres",
+      "button": "Definir"
+    },
+    "checkbox": {
+      "label": "Definir Limite de Caracteres"
+    },
+    "toast": {
+      "error": "Erro ao processar texto.",
+      "limit_reached": "Você atingiu o limite diário de uso da IA.",
+      "analysis_not_available": "Análise não disponível",
+      "loading": "Carregando..."
+    },
+    "cards_block_view": {
+      "dropdown_menu_label": "Configurações para Contagem",
+      "title_total_characters": "Total de caracteres",
+      "title_total_words": "Total de palavras",
+      "title_total_sentences": "Total de frases",
+      "title_total_paragraphs": "Total de parágrafos",
+      "title_average_words_per_sentence": "Média de palavras por frase",
+      "title_average_sentences_per_paragraph": "Média de frases por parágrafo",
+      "title_average_words_per_paragraph": "Média de palavras por parágrafo",
+      "title_frequency_of_words_per_paragraph": "Frequência de palavras por parágrafo",
+      "title_frequency_of_words_per_sentence": "Frequência de palavras por frase",
+      "title_frequency_of_punctuations_per_sentence": "Frequência de pontuações por frase",
+      "title_frequency_of_punctuations_per_paragraph": "Frequência de pontuações por parágrafo",
+      "label_remove_spaces": "Remover espaços",
+      "label_remove_special_characters": "Remover caracteres especiais",
+      "label_remove_numbers": "Remover números",
+      "label_remove_uppercase": "Remover maiúsculas",
+      "label_remove_lowercase": "Remover minúsculas",
+      "label_words_with_hyphens": "Palavras com hífens",
+      "label_words_without_hyphens": "Palavras sem hífens",
+      "label_ignore_numbers_as_words": "Ignorar números nas palavras",
+      "label_ignore_special_characters_as_words": "Ignorar caracteres especiais nas palavras",
+      "label_ignore_uppercase_as_words": "Ignorar maiúsculas nas palavras",
+      "label_ignore_lowercase_as_words": "Ignorar minúsculas nas palavras",
+      "label_consider_abbreviations": "Considerar abreviações",
+      "label_treat_multiple_punctuations_as_single_sentence": "Tratar múltiplos pontuações (!!, ??) como uma única frase.",
+      "label_ignore_short_sentences": "Ignorar frases curtas (exemplo: abaixo de 3 palavras)."
+    },
+    "states_letters": {
+      "title": "Porcentagem de Letras",
+      "description": "Analise seu texto para ver a porcentagem de letras",
+      "button": "Mostrar mais",
+      "show_less": "Mostrar menos",
+      "show_more": "Mostrar mais",
+      "no_data": "Nenhum dado de porcentagem de letras disponível"
+    },
+    "states_words": {
+      "title": "Porcentagem de Palavras",
+      "description": "Analise seu texto para ver a porcentagem de palavras",
+      "button": "Mostrar mais",
+      "show_less": "Mostrar menos",
+      "show_more": "Mostrar mais",
+      "no_data": "Nenhum dado de porcentagem de palavras disponível"
+    },
+    "states_sentences": {
+      "title": "Porcentagem de Frases",
+      "description": "Analise seu texto para ver a porcentagem de frases",
+      "button": "Mostrar mais",
+      "show_less": "Mostrar menos",
+      "show_more": "Mostrar mais",
+      "no_data": "Nenhum dado de porcentagem de frases disponível"
+    }
+  },
+  "improve_text": {
+    "title": "Melhore seu texto com IA",
+    "description": "Melhore seu texto com IA para tornar mais claro, objetivo e eficaz. Ao lado, você pode definir as configurações para o texto melhorado.",
+    "button": "Melhorar com IA",
+    "error": "Erro ao melhorar texto.",
+    "success": "Texto melhorado com sucesso.",
+    "loading": "Melhorando com GPT-4o-mini...",
+    "form": {
+      "item1": {
+        "label": "Melhore seu texto",
+        "placeholder": "Exemplo: Tornar mais objetivo, melhorar a coesão, etc."
+      },
+      "item2": {
+        "label": "Tonalidade do texto",
+        "options": {
+          "formal": "Formal",
+          "informal": "Informal",
+          "neutral": "Neutro",
+          "official": "Oficial (Isso engloba formal, corporativo e profissional)",
+          "personal": "Pessoal"
+        }
+      }, 
+      "item3": {
+        "label": "Objetivo do texto",
+        "options": {
+          "information": "Informação",
+          "education": "Educação",
+          "entertainment": "Entretenimento",
+          "marketing": "Marketing",
+          "seo": "SEO",
+          "academic": "Acadêmico",
+          "political": "Político",
+          "relationship": "Relacionamento",
+          "journalistic": "Jornalístico"
+        }
+      },
+      "item4": {
+        "label": "Correções gramaticais e de estilo",
+        "options": {
+          "improve_writing": "Melhorar a escrita",
+          "improve_clarity_and_coherence": "Melhorar clareza e coerência",
+          "improve_impact_and_persuasion": "Melhorar impacto e persuasão",
+          "make_more_concise_and_objective": "Tornar mais conciso e objetivo",
+          "correct_spelling_and_grammar": "Correção ortográfica e gramatical",
+          "inspire": "Tornar inspirador",
+          "motivational": "Tornar motivacional",
+          "emotional": "Tornar emocional",
+          "deep": "Tornar mais profundo",
+          "serious": "Tornar Sério",
+          "clear_and_direct": "Tornar mais claro e direto",
+          "humorous": "Tornar mais humorístico"
+        }
+      },
+      "item5": {
+        "label": "Níveis de complexidade",
+        "options": {
+          "simple": "Simples (palavras fáceis de entender e frases curtas)",
+          "medium": "Médio (equilíbrio entre simplicidade e sofisticação)",
+          "advanced": "Avançado (linguagem técnica ou acadêmica)"
+        }
+      },
+      "item6": {
+        "label": "Filtragem de públicos",
+        "options": {  
+          "general": "Leigos (Para um público geral, sem conhecimento específico sobre o tema)",
+          "specialists": "Especialistas (Texto mais técnico, com vocabulário especializado)",
+          "young": "Jovens (Texto mais informal, com vocabulário jovem)",
+          "medium": "Média (Público intermediário, com conhecimento sobre o tema)",
+          "entrepreneurs": "Empreendedores (Texto mais objetivo, com vocabulário empresarial)",
+          "executives": "Executivos (Texto mais formal, com vocabulário técnico)",
+          "students": "Estudantes (Texto mais acadêmico, com vocabulário acadêmico)"
+        }
+      },
+      "item7": {
+        "label": "Duração",
+        "options": {
+          "short": "Curto (1-2 parágrafos)",
+          "medium": "Médio (3-4 parágrafos)",
+          "long": "Longo (5+ parágrafos)",
+          "very_long": "Muito longo (10+ parágrafos)"
+        }
+      },
+      "item8": {
+        "label": "Regionalismos",
+        "options": {
+          "no_change": "Não alterar",
+          "regional": "Ter linguagem regional",
+          "regional_optimized": "Ter linguagem regional com otimização para o público local"
+        }
+      },
+      "item9": {
+        "label": "Layout e formatação",
+        "options": {
+          "text_flow": "Texto corrido",
+          "numbered_lists": "Listas numeradas",
+          "bullet_lists": "Listas com marcadores",
+          "tables": "Adicionar Tabelas",
+          "quotes": "Citações",
+          "quotes_with_markers": "Citações com marcadores",
+          "quotes_with_markers_and_numbers": "Citações com marcadores e numeradas",
+          "subtitles": "Subtítulos",
+          "highlighted_paragraphs": "Parágrafos destacados",
+          "paragraphs_with_titles": "Parágrafos com títulos",
+          "paragraphs_with_titles_and_subtitles": "Parágrafos com títulos e subtítulos"
+        }
+      }
+    },
+    "save_settings": "Salvar configurações",
+    "settings_prompt": {
+      "instruction_initial": "Você é um assistente de melhoria de texto. Você receberá um texto e um conjunto de configurações. Sua tarefa é melhorar o texto com base nas configurações fornecidas. Retorne o texto em português brasileiro."
+    }
+  },
+  "terms": {
+    "title": "Termos de uso:",
+    "navAcceptTerms": {
+      "title": "Aceitar termos de uso",
+      "description": "Ao acessar e utilizar o Speedchars, você concorda em cumprir com todos os termos e condições aqui estabelecidos. Leia atentamente este documento, pois a aceitação implica a concordância plena com as regras de uso, responsabilidades e limitações do serviço. Caso não concorde com qualquer item aqui definido, recomendamos que não utilize o serviço."
+    },
+    "navUseOfService": {
+      "title": "Uso do serviço",
+      "description": "O Speedchars é uma ferramenta avançada de análise de texto que utiliza a API da OpenAI (modelo GPT-4o-mini) para fornecer análises detalhadas e informações relevantes sobre os textos inseridos pelos usuários. Por meio de métricas como contagem de palavras, frases, parágrafos e outras estatísticas, o serviço auxilia na avaliação e aprimoramento do conteúdo. Ressaltamos que os resultados devem ser interpretados como apoio, sem substituir a revisão ou interpretação crítica humana."
+    },
+    "navLimitationOfUse": {
+      "title": "Limitação de uso",
+      "description": "Os usuários não devem utilizar o Speedchars para:",
+      "list": {
+        "1": "O Speedchars não se responsabiliza pela precisão, relevância ou aplicação das análises geradas. As informações fornecidas servem apenas como uma orientação e devem sempre ser verificadas pelo usuário.",
+        "2": "O serviço não deve ser utilizado para inserir, processar ou armazenar informações sensíveis, pessoais ou confidenciais, uma vez que a plataforma não oferece garantias de segurança para esses dados.",
+        "3": "O usuário é responsável pelo conteúdo que insere e por quaisquer consequências decorrentes do uso das análises fornecidas. Qualquer informação equivocada ou incompleta obtida a partir do serviço não exime o usuário da responsabilidade perante terceiros."
+      }
+    },
+    "navCookiesPolicy": {
+      "title": "Política de cookies",
+      "list": {
+        "1": "Utilizamos cookies para gerenciar e limitar o uso da funcionalidade de análise com IA, permitindo até 5 utilizações diárias. Essa medida é essencial para evitar abusos e garantir a eficiência da API.",
+        "2": "Os cookies são armazenados localmente no dispositivo e não coletamos dados pessoais por meio deles. Eles são utilizados exclusivamente para monitorar o acesso ao serviço e melhorar sua experiência.",
+        "3": "Ao continuar utilizando o Speedchars, você concorda com o uso de cookies conforme descrito, ciente de que sua utilização contribui para a segurança e o desempenho do serviço."
+      }
+    },
+    "navRestrictUseOfService": {
+      "title": "Restrição de uso do serviço",
+      "description": "Para garantir um ambiente ético e seguro, o Speedchars deve ser utilizado apenas para finalidades lícitas. Os usuários não devem fazer uso da ferramenta para:",
+      "list": {
+        "1": "Publicar, analisar ou disseminar conteúdos ilegais, ofensivos, discriminatórios ou que promovam qualquer forma de ódio. Qualquer conteúdo que incite violência ou prejudique a integridade moral dos indivíduos é estritamente proibido.",
+        "2": "Violar direitos de terceiros, incluindo direitos autorais, de propriedade intelectual e de privacidade. A reprodução ou divulgação de conteúdos sem a devida autorização pode constituir infração legal.",
+        "3": "Tentar contornar ou burlar as restrições de uso, como o limite diário de análises. Qualquer tentativa de manipulação ou fraude será imediatamente bloqueada e poderá ser reportada às autoridades competentes."
+      }
+    },
+    "navChangeTermsOfUse": {
+      "title": "Alteração de termos de uso",
+      "description": "O Speedchars reserva-se o direito de modificar, atualizar ou revisar estes termos de uso a qualquer momento, sem aviso prévio, para atender a mudanças legais, tecnológicas ou operacionais. Recomendamos que os usuários verifiquem periodicamente este documento para estar sempre atualizados quanto às condições vigentes do serviço."
+    },
+    "navContact": {
+      "title": "Contato",
+      "description": "Caso tenha dúvidas, sugestões ou necessite de esclarecimentos sobre os termos de uso, eu estou a disposição para prestar suporte e ajudar. Entre em contato comigo através do e-mail: speedchars.ofc@gmail.com ou pelo meu email: carloseduardogit@gmail.com. Obrigado por utilizar o Speedchars!"
+    }
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "navIntroduction": {
+      "title": "Introdução",
+      "description": "Esta Política de Privacidade detalha o compromisso do Speedchars com a proteção e segurança dos seus dados. Aqui, explicamos de forma transparente como coletamos, utilizamos, armazenamos e protegemos as informações fornecidas pelos usuários ao utilizar nossos serviços. Ao acessar e utilizar o Speedchars, você concorda que suas informações serão tratadas conforme descrito neste documento."
+    },
+    "navDataCollection": {
+      "title": "Coleta de Dados",
+      "description": "O Speedchars está comprometido com a privacidade dos seus usuários e não coleta informações pessoais identificáveis. Entretanto, para garantir o funcionamento eficiente do serviço e aprimorar sua experiência, podemos coletar dados não identificáveis e informações anônimas, como registros de acesso, padrões de navegação e dados de uso. Esses dados nos ajudam a melhorar continuamente a performance e a funcionalidade do nosso serviço."
+    },
+    "navCookies": {
+      "title": "Cookies",
+      "description": "Cookies são pequenos arquivos armazenados localmente no seu dispositivo que auxiliam na personalização e otimização da sua experiência de navegação. No Speedchars, utilizamos cookies para monitorar o acesso ao serviço, gerenciar o uso de funcionalidades específicas (como a análise com IA) e armazenar preferências do usuário. Os principais usos dos cookies incluem:",
+      "list": {
+        "1": "Controlar e limitar o uso da funcionalidade de análise com IA, permitindo até 15 utilizações diárias.",
+        "2": "Analisar o comportamento de acesso para identificar oportunidades de melhoria e otimizar o desempenho do serviço.",
+        "3": "Armazenar configurações e preferências do usuário, proporcionando uma experiência mais personalizada e eficiente."
+      },
+      "note": "Observação: Você pode ajustar as configurações de cookies no seu navegador ou desativá-los. No entanto, a desativação pode impactar algumas funcionalidades essenciais do serviço, comprometendo a experiência completa de utilização."
+    },
+    "navDataSecurity": {
+      "title": "Segurança dos Dados",
+      "description": "A segurança dos dados dos nossos usuários é uma prioridade para o Speedchars. Adotamos medidas técnicas e organizacionais robustas para proteger quaisquer dados coletados, mesmo que de forma temporária. As análises de texto são processadas em tempo real utilizando a API da OpenAI (modelo GPT-4o-mini), garantindo um processamento seguro, eficaz e adequado às melhores práticas de proteção de dados."
+    },
+    "navRights": {
+      "title": "Direitos do Usuário",
+      "description": "Mesmo não armazenando informações pessoais de maneira permanente, reconhecemos o direito do usuário à transparência e ao controle sobre os dados que possam ser processados temporariamente. Se você tiver dúvidas, precisar de esclarecimentos ou desejar mais informações sobre como seus dados são tratados, entre em contato conosco. Estamos à disposição para atender qualquer solicitação relacionada à privacidade e proteção dos seus dados."
+    },
+    "navChangePrivacy": {
+      "title": "Alteração da Política de Privacidade",
+      "description": "O Speedchars reserva-se o direito de modificar, atualizar ou revisar esta Política de Privacidade a qualquer momento, sem aviso prévio, para atender a mudanças legais, tecnológicas ou operacionais. Recomendamos que os usuários verifiquem periodicamente este documento para se manterem informados sobre os termos vigentes e as medidas de proteção aplicadas aos seus dados."
+    },
+    "navContact": {
+      "title": "Contato",
+      "description": "Caso você tenha dúvidas, sugestões ou necessite de esclarecimentos adicionais sobre a nossa Política de Privacidade, não hesite em entrar em contato conosco pelos e-mails: speedchars.ofc@gmail.com ou carloseduardogit@gmail.com. Sua confiança é muito importante para nós e estamos sempre disponíveis para ajudar."
+    }
+  },
+  "about": {
+    "title": "Sobre o Speedchars",
+    "description": "O Speedchars é uma ferramenta avançada de análise de texto que utiliza a API da OpenAI (modelo GPT-4o-mini) para fornecer análises detalhadas e informações relevantes sobre os textos inseridos pelos usuários. Por meio de métricas como contagem de palavras, frases, parágrafos e outras estatísticas, o serviço auxilia na avaliação e aprimoramento do conteúdo.",
+    "what_is_speedchars": {
+      "title": "O que é o Speedchars?",
+      "description": "O Speedchars é uma plataforma que permite analisar textos em tempo real, fornecendo estatísticas detalhadas sobre caracteres, palavras e frases. Além disso, oferecemos uma funcionalidade de IA para ajudar na análise textual e para melhorar o texto, limitada a 15 usos diários para cada usuário."
+    },
+    "how_it_works": {
+      "title": "Como funciona o Speedchars?",
+      "description": "Siga esses passos para utilizar o Speedchars:",
+      "steps": {
+        "1": "Insira o texto que deseja analisar no campo de texto.",
+        "2": "Clique no botão 'Analisar' para obter as estatísticas do texto.",
+        "3": "Clique no botão 'Melhorar' para utilizar a funcionalidade de IA para melhorar o texto.",
+        "4": "Você pode configurar as configurações da IA para melhorar o texto de acordo com suas necessidades."
+      }
+    },
+    "why_use_speedchars": {
+      "title": "Por que usar o Speedchars?",
+      "description": "O Speedchars é uma ferramenta poderosa que oferece várias vantagens para os usuários:",
+      "benefits": {
+        "1": "Análise rápida e eficiente de textos.",
+        "2": "Funcionalidade de IA para melhorar o texto.",
+        "3": "Processo de contagem automático de caracteres, paragrafos, palavras e frases, além de poder filtrar a contagem de caracteres, palavras e frases de acordo com as necessidades do usuário."
+      }
+    },
+    "technologies_used": {
+      "title": "Tecnologias utilizadas",
+      "description": "O Speedchars utiliza as seguintes tecnologias:",
+      "technologies": {
+        "1": "Next.js",
+        "2": "Tailwind CSS",
+        "3": "OpenAI API",
+        "4": "Node.js para API",
+        "5": "TypeScript"
+      }
+    },
+    "contact": {
+      "title": "Contato",
+      "description": "Caso você tenha dúvidas, sugestões ou necessite de esclarecimentos adicionais sobre o Speedchars, não hesite em entrar em contato conosco pelos e-mails: speedchars.ofc@gmail.com ou carloseduardogit@gmail.com. Sua confiança é muito importante para nós e estamos sempre disponíveis para ajudar."
+    }
+  },
+  "landing": {
+    "hero": "Seja rápido e eficiente com o Speedchars",
+    "hero_title": "Introdução",
+    "hero_description": "Descubra o poder do Speedchars! Tenha acesso a estatísticas detalhadas sobre seu texto e identifique áreas que precisam de aprimoramento. Experimente agora e veja seus textos ganharem vida!",
+    "hero_button": "Experimente agora, é grátis!",
+    "hero_scroll_text": "Você pode escrever mais rápido com o Speedchars",
+    "features": {
+      "features_name": "Funcionalidades",
+      "feature_section_title": "Funcionalidades para você utilizar",
+      "featire_section_description": "O Speedchars oferece várias funcionalidades e você pode utilizar a IA para melhorar seu texto.",
+      "features": {
+        "1": {
+          "title": "Análise de texto",
+          "description": "Melhore sua experiência de escrita com a análise de texto em tempo real. À medida que você digita, o Speedchars fornece feedback instantâneo sobre as estatísticas do texto, incluindo contagem de caracteres, palavras e frases, ajudando você a manter clareza e concisão."
+        },
+        "2": {
+          "title": "Melhore seu texto com IA",
+          "description": "Aproveite o poder da IA para refinar seu texto. O Speedchars oferece uma funcionalidade avançada de IA que fornece sugestões personalizadas para melhorar a clareza, coerência e impacto. Utilizando o modelo GPT-4o-mini, ele adapta as melhorias para atender às suas necessidades específicas de escrita."
+        },
+        "3": {
+          "title": "Análise de texto com IA",
+          "description": "Utilize insights impulsionados por IA para analisar seu texto de forma abrangente. Esta funcionalidade divide seu texto em estatísticas detalhadas, incluindo dados de caracteres, palavras e frases, utilizando o sofisticado modelo GPT-4o-mini para oferecer uma compreensão mais profunda da sua escrita."
+        }
+      }
+    },
+    "ideal_for": {
+      "ideal_for_name": "Ideal para",
+      "title": "Ideal para",
+      "description": "O Speedchars é ideal para todos os usuários que desejam melhorar sua experiência de escrita e aprimorar seu texto.",
+      "list": {
+        "1": {
+          "title": "Escritores e colaboradores",
+          "description": "Buscando aumentar a eficiência e a qualidade de suas produções."
+        },
+        "2": {
+          "title": "Estudantes e acadêmicos",
+          "description": "Buscando melhorar suas habilidades de escrita acadêmica."
+        },
+        "3": {
+          "title": "Profissionais",
+          "description": "Buscando aprimorar suas habilidades de escrita profissional."
+        },
+        "4": {
+          "title": "Quem deseja melhorar sua escrita de forma geral.",
+          "description": "Buscando melhorar sua escrita de forma geral."
+        },
+        "5": {
+          "title": "Blogueiros",
+          "description": "Buscando criar conteúdo mais envolvente."
+        },
+        "6": {
+          "title": "Redatores publicitários",
+          "description": "Buscando otimizar suas campanhas."
+        },
+        "7": {
+          "title": "Jornalistas",
+          "description": "Desejam melhorar a clareza e precisão de suas reportagens."
+        },
+        "8": {
+          "title": "Autores de ficção",
+          "description": "Procuram desenvolver narrativas mais cativantes."
+        }
+      }
+    },
+    "about_section": {
+      "title": "Sobre o Speedchars",
+      "about_section_name": "Sobre o Speedchars",
+      "description": "Speedchars é uma ferramenta avançada de análise de texto que utiliza a API da OpenAI (modelo GPT-4o-mini) para fornecer análises detalhadas e informações relevantes sobre os textos inseridos pelos usuários. Por meio de métricas como contagem de palavras, frases, parágrafos e outras estatísticas, o serviço auxilia na avaliação e aprimoramento do conteúdo."
+    }
+  }
+}
