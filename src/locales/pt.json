@@ -1,4 +1,42 @@
 {
+  "feedback": {
+    "title": "Feedback",
+    "description": "Deixe seu feedback sobre o Speedchars",
+    "button": "Enviar feedback",
+    "sending": "Enviando...",
+    "success": "Feedback enviado com sucesso!",
+    "error": "Erro ao enviar feedback.",
+    "rating": "Avalie o Speedchars",
+    "thanks": "Obrigado por enviar seu feedback!",
+    "placeholder": "Deixe seu feedback aqui, me ajude a melhorar o Speedchars...",
+    "options": {
+      "1": "Elogio",
+      "2": "Crítica",
+      "3": "Sugestão",
+      "4": "Outro"
+    }
+  },
+  "report": {
+    "title": "Reportar",
+    "description": "Reporte um problema para o Speedchars ou uma sugestão de melhoria",
+    "button": "Reportar",
+    "success": "Problema reportado com sucesso!",
+    "sending": "Enviando...",
+    "placeholder": "Deixe seu report aqui, me ajude a melhorar o Speedchars...",
+    "error": "Erro ao reportar problema.",
+    "options": {
+      "1": "Problema",
+      "2": "Sugestão",
+      "3": "Solicitar nova funcionalidade",
+      "4": "Outro"
+    }
+  },
+  "accept_cookies": {
+    "title": "Aceitar cookies",
+    "description": "Este site utiliza cookies para garantir que você obtenha a melhor experiência possível. Ao continuar navegando, você concorda com o uso de cookies. Veja nessa página a nossa política de cookies.",
+    "button": "Aceitar",
+    "click_here": "Clique aqui"
+  },
   "block_home_view": {
     "title": "Analise seu texto conforme escreve :)",
     "character_limit": "Definir Limite de Caracteres",

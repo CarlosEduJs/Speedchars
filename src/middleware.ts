@@ -35,8 +35,6 @@ export function middleware(req: NextRequest) {
   return NextResponse.next();
 }
 
-const matchers = ["/api/analyze-text", "/api/ai-improve-text"];
-
 export const config = {
-  matcher: matchers,
+  matcher: ["/api/analyze-text", "/api/ai-improve-text", "/api/send-feedback"],
 };

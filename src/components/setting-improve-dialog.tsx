@@ -119,7 +119,6 @@ function FormImproveDialog() {
                     ).includes(key)}
 
                     onCheckedChange={(checked) => {
-                      console.log("DEBUG: Checkbox changed", option.settingKey, key, checked);
                       handleSettingsChange(
                         option.settingKey,
                         checked
@@ -142,7 +141,6 @@ function FormImproveDialog() {
               <RadioGroup
                 value={((settings[option.settingKey] as { value: string }).value || "")}
                 onValueChange={(value) => {
-                  console.log("DEBUG: Radio changed", option.settingKey, value, settings[option.settingKey]);
                   handleSettingsChange(option.settingKey, value);
                 }}
               >

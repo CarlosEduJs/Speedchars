@@ -7,6 +7,7 @@ import SideLanding from "./side-landing";
 import { useTranslation } from "./translation-provider";
 import { useEffect, useState } from "react";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
+import Feedback from "./feedback";
 
 type NavItem = {
   name: string;
@@ -24,7 +25,7 @@ export default function HeaderLanding() {
     { name: t("landing.features.features_name"), href: "#features" },
     { name: t("landing.ideal_for.ideal_for_name"), href: "#ideal-for" },
     { name: t("landing.about_section.about_section_name"), href: "#about" },
-  ]; 
+  ];
 
   useEffect(() => {
     const onScroll = () => {
@@ -61,22 +62,29 @@ export default function HeaderLanding() {
   }, []);
 
   useEffect(() => {
-    const sectionElements = dataNav.map(link => document.querySelector(link.href));
+    const sectionElements = dataNav.map((link) =>
+      document.querySelector(link.href)
+    );
 
-    const observer = new IntersectionObserver((entries) => {
-      const visibleEntries = entries.filter(entry => entry.isIntersecting);
-      if (visibleEntries.length > 0) {
-        visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        setActiveSection(`#${visibleEntries[0].target.id}`);
-      }
-    }, { root: null, threshold: [0.25, 0.5, 0.75] });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntries = entries.filter((entry) => entry.isIntersecting);
+        if (visibleEntries.length > 0) {
+          visibleEntries.sort(
+            (a, b) => b.intersectionRatio - a.intersectionRatio
+          );
+          setActiveSection(`#${visibleEntries[0].target.id}`);
+        }
+      },
+      { root: null, threshold: [0.25, 0.5, 0.75] }
+    );
 
-    sectionElements.forEach(section => {
+    sectionElements.forEach((section) => {
       if (section) observer.observe(section);
     });
 
     return () => {
-      sectionElements.forEach(section => {
+      sectionElements.forEach((section) => {
         if (section) observer.unobserve(section);
       });
     };
@@ -86,12 +94,14 @@ export default function HeaderLanding() {
     <header
       className={`
         z-50 flex justify-between items-center px-3 md:px-6 lg:px-12 transition-all duration-300
-        ${isScrolled 
-          ? "fixed top-0 left-0 w-full bg-background/90 backdrop-blur-sm shadow-md py-2 lg:h-20" 
-          : "relative border-b h-fit py-2 lg:border-none lg:h-24"}
+        ${
+          isScrolled
+            ? "fixed top-0 left-0 w-full bg-background/90 backdrop-blur-sm shadow-md py-2 lg:h-20"
+            : "relative border-b h-fit py-2 lg:border-none lg:h-24"
+        }
       `}
     >
-      <ScrollProgress  />
+      <ScrollProgress />
       <div className="max-lg:hidden">
         <Branding isSrOnly={false} />
       </div>
@@ -99,14 +109,16 @@ export default function HeaderLanding() {
         <SideLanding />
         <Branding isSrOnly={true} />
       </div>
-      <nav className="items-center gap-12 hidden lg:flex">
+      <nav className="items-center gap-8 hidden lg:flex">
         {dataNav.map((link) => (
           <Link
             key={link.href}
             href={"/"}
             data-href={link.href}
             className={`text-sm font-medium hover:text-primary header-nav-link ${
-              activeSection === link.href ? "text-primary" : "text-muted-foreground"
+              activeSection === link.href
+                ? "text-primary"
+                : "text-muted-foreground"
             }`}
           >
             {link.name}
@@ -117,6 +129,12 @@ export default function HeaderLanding() {
         <ModeToggle />
         <div className="max-lg:hidden">
           <SelectLanguageDropdown isSrOnly={true} />
+        </div>
+          <div className="lg:hidden">
+          <Feedback isSrOnly={true} />
+        </div>
+        <div className="max-lg:hidden">
+          <Feedback isSrOnly={false} />
         </div>
         <BtnToHomePage />
       </div>

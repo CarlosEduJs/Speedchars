@@ -45,7 +45,7 @@ export default function BlockHomeView() {
   const [aiUsageCount, setAiUsageCount] = useState(0);
   const maxUses = 15;
 
-  const fetchAiUsageCount = async () => { 
+  const fetchAiUsageCount = async () => {
     try {
       const response = await fetch("/api/get-ai-usage-count");
       if (response.ok) {
@@ -83,57 +83,34 @@ export default function BlockHomeView() {
     if (!toggleShowAnalyzeTextWithAi) {
       setLoading(true);
       try {
-        const moderationResponse = await fetch("/api/ai-moderation", {
+        const response = await fetch("/api/analyze-text", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ text: text }),
+          body: JSON.stringify({ text: text, language: language }),
         });
 
-        const moderationData = await moderationResponse.json();
+        const data = await response.json();
 
-        if (moderationData.flagged) {
+        if (response.status === 429) {
           toast({
-            title: "Text flagged as inappropriate.",
+            title: "You have reached the daily limit of AI usage.",
           });
           return;
         }
 
-        try {
-          const response = await fetch("/api/analyze-text", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ text: text, language: language }),
-          });
-
-          const data = await response.json();
-
-          if (response.status === 429) {
-            toast({
-              title: "You have reached the daily limit of AI usage.",
-            });
-            return;
-          }
-
-          setAiAnalysis(data.analysis || "Error analyzing text.");
-          setAiUsageCount(Number(aiUsageCount) + 1);
-          toast({
-            title: "Text analyzed successfully.",
-          });
-        } catch (error) {
-          toast({
-            title: "Error processing text.",
-          });
-        }
+        setAiAnalysis(data.analysis || "Error analyzing text.");
+        setAiUsageCount(Number(aiUsageCount) + 1);
+        toast({
+          title: "Text analyzed successfully.",
+        });
       } catch (error) {
         toast({
-          title: "Error in moderation API call:",
-          description: `${error}`,
+          title: "Error processing text.",
         });
       } finally {
         setLoading(false);
       }
     }
-
   };
 
   const btnIsDisabled = aiUsageCount >= maxUses || loading || !text;
@@ -188,7 +165,7 @@ export default function BlockHomeView() {
           <Loader2 className="w-4 h-4 animate-spin" />
         ) : (
           <>
-            {` ${aiUsageCount}/${maxUses} ${t("block_home_view.uses_today")}`}
+            {`${aiUsageCount}/${maxUses} ${t("block_home_view.uses_today")}`}
             <Sparkles className="w-4 h-4 text-primary" />
           </>
         )}
@@ -229,6 +206,7 @@ export default function BlockHomeView() {
           )}
         </div>
       )}
+      <GeralInforsText />
       <CardsBlockView
         values={values}
         settings={settings}
@@ -237,7 +215,6 @@ export default function BlockHomeView() {
       <StatesLetters />
       <StatesWords />
       <StatesSetences />
-      <GeralInforsText />
     </div>
   );
 }

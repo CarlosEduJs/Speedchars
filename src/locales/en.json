@@ -1,4 +1,42 @@
 {
+  "feedback": {
+    "title": "Feedback",
+    "description": "Leave your feedback about Speedchars",
+    "button": "Send Feedback",
+    "success": "Feedback sent successfully!",
+    "sending": "Sending...",
+    "error": "Error sending feedback.",
+    "rating": "Rate Speedchars",
+    "thanks": "Thank you for your feedback!",
+    "placeholder": "Leave your feedback here, help me improve Speedchars...",
+    "options": {
+      "1": "Praise",
+      "2": "Criticism",
+      "3": "Suggestion",
+      "4": "Other"
+    }
+  },
+  "report": {
+    "title": "Report",
+    "description": "Report a problem to Speedchars or a suggestion for improvement",
+    "button": "Report",
+    "success": "Problem reported successfully!",
+    "sending": "Sending...",
+    "placeholder": "Leave your report here, help me improve Speedchars...",
+    "error": "Error reporting problem.",
+    "options": {
+      "1": "Problem",
+      "2": "Suggestion",
+      "3": "Request new feature",
+      "4": "Other"
+    }
+  },
+  "accept_cookies": {
+    "title": "Accept cookies",
+    "description": "This website uses cookies to ensure you get the best experience on our website. By continuing to navigate, you agree to the use of cookies. See this page our cookie policy.",
+    "button": "Accept",
+    "click_here": "Click here"
+  },
   "block_home_view": {
     "title": "Analyze your text as you write :)",
     "character_limit": "Set Character Limit",

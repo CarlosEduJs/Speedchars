@@ -4,6 +4,7 @@ import { TranslationProvider } from "@/components/translation-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { geist } from "./fonts";
+import QuickAccess from "@/components/quick-access";
 
 export const metadata: Metadata = {
   title: "Speedchars",
@@ -25,7 +26,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
-            <TranslationProvider>{children}</TranslationProvider>
+            <TranslationProvider>
+              {children}
+              <QuickAccess />
+            </TranslationProvider>
           </TooltipProvider>
         </ThemeProvider>
       </body>
