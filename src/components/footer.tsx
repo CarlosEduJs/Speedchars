@@ -13,7 +13,7 @@ export default function Footer() {
     },
     {
       label: "Github",
-      href: "https://github.com/guilherme-s-s",
+      href: "https://github.com/CarlosEduJs/Speedchars",
     },
     {
       label: "Terms",

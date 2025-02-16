@@ -25,7 +25,7 @@ export default function Introduction() {
         <div className="flex flex-col gap-4 md:gap-6 items-center w-full">
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
             <BtnToHomePage />
-            <Link href="https://github.com/CarlosDevJs/speedchars" className="z-10">
+            <Link href="https://github.com/CarlosEduJs/Speedchars" className="z-10">
               <AnimatedShinyTextDemo text={"💫 Github project - Open Source"} />
             </Link>
           </div>
