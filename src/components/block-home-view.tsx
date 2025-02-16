@@ -160,12 +160,11 @@ export default function BlockHomeView() {
         disabled={btnIsDisabled}
       >
         {t("block_home_view.show_analyze_text_with_ai")}
-
         {loading ? (
           <Loader2 className="w-4 h-4 animate-spin" />
         ) : (
           <>
-            {`${aiUsageCount}/${maxUses} ${t("block_home_view.uses_today")}`}
+            {` ${aiUsageCount}/${maxUses} ${t("block_home_view.uses_today")}`}
             <Sparkles className="w-4 h-4 text-primary" />
           </>
         )}
