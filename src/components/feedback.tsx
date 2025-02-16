@@ -157,7 +157,7 @@ const FormFeedback = ({
       const data = await response.json();
 
       if (data.error) {
-        setIsError({
+        return setIsError({
           feedback: data.error,
         });
       }

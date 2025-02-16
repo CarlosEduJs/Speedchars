@@ -1,13 +1,6 @@
 import {
-  Smile,
-  ThumbsUp,
-  ThumbsDown,
   Lightbulb,
   MessageSquare,
-  Star,
-  SmilePlus,
-  Meh,
-  Frown,
   CheckCircle,
   Bug,
   Plus,
@@ -141,7 +134,7 @@ const FormReport = ({ formData, setIsReportSuccess }: FormReportProps) => {
       });
       const data = await response.json();
       if (data.error) {
-        setIsError({ description: data.error });
+        return setIsError({ description: data.error });
       }
       setIsReportSuccess(true);
       setTimeout(() => {
