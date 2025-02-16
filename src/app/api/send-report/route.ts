@@ -35,7 +35,7 @@ export async function POST(request: Request) {
 
     if (
       !reportType ||
-      !["problem", "suggestion", "feature_request", "other"].includes(
+      !["problem", "suggestion", "request", "other"].includes(
         reportType
       )
     ) {
