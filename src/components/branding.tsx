@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Branding({ isSrOnly }: { isSrOnly: boolean }) {
   return (
     <Link href="/" className="flex items-center gap-2">
-      <Image src={"/logo.png"} alt="Speedchars" width={32} height={32} />
+      <Image src={"/logo.png"} alt="logo" width={32} height={32} />
       <h1 className={cn("text-xl font-bold", isSrOnly && "sr-only")}>
         speedchars
       </h1>

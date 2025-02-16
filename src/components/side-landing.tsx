@@ -77,6 +77,7 @@ export default function SideLanding() {
     <Sheet>
       <SheetTrigger>
         <AlignLeft className="w-4 h-4 block lg:hidden hover:text-primary" />
+        <span className="sr-only">Sidebar</span>
       </SheetTrigger>
       <SheetContent side="left">
         <SheetHeader>

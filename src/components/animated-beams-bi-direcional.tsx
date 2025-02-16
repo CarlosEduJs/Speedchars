@@ -44,12 +44,15 @@ export function AnimatedBeamsBiDirecional() {
         <div className="flex flex-row justify-between">
           <Circle ref={div1Ref} tooltip="You">
             <Icons.user />
+            <span className="sr-only">User</span>
           </Circle>
           <Circle ref={div3Ref} tooltip="Speedchars">
             <Icons.speedchars />
+            <span className="sr-only">Speedchars</span>
           </Circle>
           <Circle ref={div2Ref} tooltip="ChatGpt - OpenAI">
             <Icons.openai />
+            <span className="sr-only">ChatGpt - OpenAI</span>
           </Circle>
         </div>
       </div>

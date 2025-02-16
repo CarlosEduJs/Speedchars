@@ -20,6 +20,7 @@ export default function QuickAccess() {
           className="fixed bottom-4 right-10"
         >
           <PersonStanding className="w-4 h-4" />
+          <span className="sr-only">Quick Access</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="min-w-52 p-4">

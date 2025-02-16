@@ -42,6 +42,7 @@ export default function ModeToggle() {
   return (
     <Button variant="ghost" size="icon" onClick={toggleTheme}>
       {getIcon()}
+      <span className="sr-only">Toggle theme</span>
     </Button>
   );
 }
