@@ -30,8 +30,8 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         model: model || "gpt-4o-mini",
         temperature: 0.7,
-        max_tokens: 5000,
-        stream: true, // Habilita streaming
+        max_tokens: 25000,
+        stream: true,
         messages: [
           { role: "system", content: systemContent },
           { role: "user", content: userContent },
