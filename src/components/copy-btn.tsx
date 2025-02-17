@@ -1,29 +1,32 @@
+"use client";
+
 import { CopyIcon } from "lucide-react";
 import { Button } from "./ui/button";
-import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 type CopyBtnProps = {
   text: string;
 };
 
 export default function CopyBtn({ text }: CopyBtnProps) {
-  const { toast } = useToast();
+  const [isCopied, setIsCopied] = useState(false);
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
-    toast({
-      title: "Text copied to clipboard.",
-    });
+    setIsCopied(true);
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 3000);
   };
 
   return (
     <Button
-      variant="outline"
+      variant="ghost"
       size="sm"
       className="max-w-fit"
       onClick={() => copyToClipboard(text)}
     >
       <CopyIcon className="w-4 h-4" />
-      Copy
+      {isCopied ? "Copied" : "Copy"}
     </Button>
   );
 }

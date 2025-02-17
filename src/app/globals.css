@@ -99,4 +99,68 @@ body {
   }
 }
 
+.prose {
+  line-height: 1.8;
+  margin-bottom: 2em;
+  color: #333;
+}
 
+.dark .prose {
+  color: #ddd;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  font-weight: bold;
+  color: #222;
+}
+
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3 {
+  color: #fff;
+}
+
+.prose p {
+  margin-bottom: 1.5em;
+}
+
+.prose ul,
+.prose ol {
+  margin-left: 2em;
+  margin-bottom: 1.5em;
+}
+
+.prose li {
+  margin-bottom: 0.75em;
+}
+
+.prose a {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+.dark .prose a {
+  color: #8ab4f8;
+}
+
+.prose blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1em;
+  color: #555;
+  font-style: italic;
+}
+
+.dark .prose blockquote {
+  border-left-color: #555;
+  color: #aaa;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

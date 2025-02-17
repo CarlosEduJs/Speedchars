@@ -34,7 +34,7 @@
   "accept_cookies": {
     "title": "Aceitar cookies",
     "description": "Este site utiliza cookies para garantir que você obtenha a melhor experiência possível. Ao continuar navegando, você concorda com o uso de cookies. Veja nessa página a nossa política de cookies.",
-    "button": "Aceitar",
+    "button": "Entendi, não mostre novamente",
     "click_here": "Clique aqui"
   },
   "block_home_view": {
@@ -52,6 +52,8 @@
     "text_too_long": "Texto muito longo",
     "time_estimated_of_reading": "Tempo estimado de leitura",
     "info_openai_usage": "Este site utiliza a API da OpenAI. Todas as respostas são geradas pelo modelo GPT-4o-mini. Por favor, não insira dados pessoais ao analisar seu texto, nem conteúdos inadequados ou inapropriados. Obrigado por utilizar o Speedchars!",
+    "not_text_analyzed": "Nenhum texto analisado ainda, aguardando a resposta da IA...",
+    "not_text_improved": "Nenhum texto melhorado ainda, aguardando a resposta da IA...",
     "input_block": {
       "placeholder": "Digite o texto para analisar... (Ou cole)"
     },
@@ -142,7 +144,7 @@
           "official": "Oficial (Isso engloba formal, corporativo e profissional)",
           "personal": "Pessoal"
         }
-      }, 
+      },
       "item3": {
         "label": "Objetivo do texto",
         "options": {
@@ -184,7 +186,7 @@
       },
       "item6": {
         "label": "Filtragem de públicos",
-        "options": {  
+        "options": {
           "general": "Leigos (Para um público geral, sem conhecimento específico sobre o tema)",
           "specialists": "Especialistas (Texto mais técnico, com vocabulário especializado)",
           "young": "Jovens (Texto mais informal, com vocabulário jovem)",

@@ -8,7 +8,7 @@ export function middleware(req: NextRequest) {
   let usageCount = parseInt(req.cookies.get(cookieName)?.value || "0", 10);
 
   if (
-    (url.pathname === "/api/analyze-text" && usageCount >= maxUses) ||
+    (url.pathname === "/api/ai-analyze-text" && usageCount >= maxUses) ||
     (url.pathname === "/api/ai-improve-text" && usageCount >= maxUses)
   ) {
     return NextResponse.json(
@@ -18,7 +18,7 @@ export function middleware(req: NextRequest) {
   }
 
   if (
-    url.pathname === "/api/analyze-text" ||
+    url.pathname === "/api/ai-analyze-text" ||
     url.pathname === "/api/ai-improve-text"
   ) {
     usageCount += 1;
@@ -36,5 +36,9 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/api/analyze-text", "/api/ai-improve-text", "/api/send-feedback"],
+  matcher: [
+    "/api/ai-analyze-text",
+    "/api/ai-improve-text",
+    "/api/send-feedback",
+  ],
 };

@@ -1,6 +1,5 @@
 import { useAnalyzeText } from "./analyze-text-provider";
-import GenerateImproveBlock from "./generate-improve-block";
-import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
+import { Card, CardContent, CardHeader } from "./ui/card";
 
 export default function GeralInforsText() {
   const { geralInformation } = useAnalyzeText();
@@ -17,16 +16,17 @@ export default function GeralInforsText() {
         </div>
         <div className="flex flex-col gap-2">
           <p className="text-sm font-semibold">Total Paragraphs:</p>
-          <p className="text-4xl font-bold">{geralInformation.totalParagraphs}</p>
+          <p className="text-4xl font-bold">
+            {geralInformation.totalParagraphs}
+          </p>
         </div>
         <div className="flex flex-col gap-2">
           <p className="text-sm font-semibold">Total Sentences:</p>
-          <p className="text-4xl font-bold">{geralInformation.totalSentences}</p>
+          <p className="text-4xl font-bold">
+            {geralInformation.totalSentences}
+          </p>
         </div>
       </CardContent>
-      <CardFooter>
-        <GenerateImproveBlock />
-      </CardFooter>
     </Card>
   );
 }

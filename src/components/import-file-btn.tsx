@@ -22,7 +22,7 @@ export default function ImportFileBtn() {
   return (
     <>
       <Button
-        variant="outline"
+        variant="ghost"
         size="sm"
         className="gap-2 mr-auto"
         onClick={() => {

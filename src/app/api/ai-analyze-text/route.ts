@@ -13,11 +13,11 @@ export async function POST(req: Request) {
     }
 
     const isEnglish = language === "en";
-    
+
     const systemContent = isEnglish
       ? "You are an advanced text analyzer specializing in providing detailed insights into textual content. Your goal is to deliver precise and structured analysis."
       : "Você é um analisador de textos avançado, especializado em fornecer insights detalhados sobre o conteúdo textual. Seu objetivo é oferecer uma análise precisa e estruturada.";
- 
+
     const userContent = isEnglish
       ? `Analyze the following text and provide a detailed report including:
         1. Total word count, sentence count, and character count, including unique word count.
@@ -60,6 +60,9 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify({
         model: model || "gpt-4o-mini",
+        temperature: 0.7,
+        max_tokens: 5000,
+        stream: true,
         messages: [
           { role: "system", content: systemContent },
           { role: "user", content: userContent },
@@ -75,11 +78,54 @@ export async function POST(req: Request) {
       );
     }
 
-    const data = await response.json();
-    const analysis =
-      data.choices?.[0]?.message?.content || "Analysis not available";
+    const stream = new ReadableStream({
+      async start(controller) {
+        const reader = response.body?.getReader();
+        const decoder = new TextDecoder();
+        let buffer = "";
 
-    return NextResponse.json({ analysis }, { status: 200 });
+        try {
+          while (true) {
+            const { done, value } = await reader!.read();
+            if (done) break;
+
+            buffer += decoder.decode(value, { stream: true });
+
+            const lines = buffer.split("\n");
+            buffer = lines.pop() || "";
+
+            for (const line of lines) {
+              const cleanedLine = line.replace(/^data: /, "").trim();
+              if (cleanedLine === "[DONE]") continue;
+
+              if (cleanedLine) {
+                try {
+                  const json = JSON.parse(cleanedLine);
+                  const content = json.choices[0]?.delta?.content || "";
+                  controller.enqueue(
+                    new TextEncoder().encode(
+                      `data: ${JSON.stringify({ response: content })}\n\n`
+                    )
+                  );
+                } catch (error) {
+                  console.error("Error parsing JSON:", error);
+                }
+              }
+            }
+          }
+        } finally {
+          controller.close();
+        }
+      },
+    });
+
+    return new Response(stream, {
+      headers: {
+        "Content-Type": "text/event-stream",
+        "Cache-Control": "no-cache",
+        Connection: "keep-alive",
+      },
+    });
   } catch (error) {
     console.error("Error in API:", error);
     return NextResponse.json(
