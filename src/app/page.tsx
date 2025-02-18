@@ -4,9 +4,6 @@ import LandingBlock from "../components/landing-block";
 export const metadata: Metadata = {
   title: "Speedchars",
   description: "This analytics tool for speedwriting",
-  icons: {
-    icon: "./favicon.ico",
-  },
   keywords: [
     "speedwriting",
     "speedreading",
