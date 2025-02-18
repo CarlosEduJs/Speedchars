@@ -7,7 +7,7 @@ import {
   useContext,
   useEffect,
 } from "react";
- 
+
 import {
   handleSentencesCount,
   handleWordsCount,
@@ -52,12 +52,6 @@ export type Settings = {
 type AnalyzeTextContextType = {
   text: string;
   setText: (text: string) => void;
-  characterLimitToggle: boolean;
-  setCharacterLimitToggle: (toggle: boolean) => void;
-  characterLimit: number;
-  setCharacterLimit: (limit: number) => void;
-  handleCharacterLimitToggle: () => void;
-  handleCharacterLimit: () => void;
   handleTextChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   values: Values;
   timeEstimatedOfReading: number;
@@ -82,12 +76,6 @@ type AnalyzeTextContextType = {
 export const AnalyzeTextContext = createContext<AnalyzeTextContextType>({
   text: "",
   setText: () => {},
-  characterLimitToggle: false,
-  setCharacterLimitToggle: () => {},
-  characterLimit: 0,
-  setCharacterLimit: () => {},
-  handleCharacterLimitToggle: () => {},
-  handleCharacterLimit: () => {},
   handleTextChange: () => {},
   timeEstimatedOfReading: 0,
   values: {
@@ -147,7 +135,7 @@ export const AnalyzeTextProvider = ({
 }) => {
   const [text, setText] = useState("");
   const [characterLimitToggle, setCharacterLimitToggle] = useState(false);
-  const [characterLimit, setCharacterLimit] = useState(100000);
+  const [characterLimit, setCharacterLimit] = useState(10000);
   const [timeEstimatedOfReading, setTimeEstimatedOfReading] = useState(0);
   const [timeMeasure, setTimeMeasure] = useState<
     "minutes" | "seconds" | "hours"
@@ -190,25 +178,13 @@ export const AnalyzeTextProvider = ({
     setSettings((prev) => ({ ...prev, [setting]: value }));
   };
 
-  const handleCharacterLimitToggle = useCallback(() => {
-    setCharacterLimitToggle((prev) => !prev);
-  }, [characterLimitToggle]);
-
-  const handleCharacterLimit = useCallback(() => {
-    setCharacterLimit(characterLimit);
-  }, [characterLimit]);
-
   const handleTextChange = useCallback(
     (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       const newText = e.target.value;
-      if (characterLimitToggle) {
-        if (newText.length <= characterLimit) {
-          setText(newText);
-        } else {
-          setText(newText.slice(0, characterLimit));
-        }
-      } else {
+      if (newText.length <= characterLimit) {
         setText(newText);
+      } else {
+        setText(newText.slice(0, characterLimit));
       }
     },
     [characterLimitToggle, characterLimit]
@@ -247,12 +223,6 @@ export const AnalyzeTextProvider = ({
         text,
         timeEstimatedOfReading,
         setText,
-        characterLimitToggle,
-        setCharacterLimitToggle,
-        characterLimit,
-        setCharacterLimit,
-        handleCharacterLimitToggle,
-        handleCharacterLimit,
         handleTextChange,
         values,
         settings,

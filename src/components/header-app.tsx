@@ -3,8 +3,6 @@
 import Branding from "./branding";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import ModeToggle from "./mode-toggle";
-import SelectLanguageDropdown from "./select-language-dropdown";
 import { SettingsDialog } from "./settings-dialog";
 
 export default function HeaderApp() {
