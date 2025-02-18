@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Logo](https://i.postimg.cc/BbnQ7Yr0/Design-sem-nome-removebg-preview.png)
 
-## Getting Started
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-First, run the development server:
+# 🧩Speedchars- Text Analyzer and Improve
+
+🎫Speedchars is an advanced text analysis tool that uses the OpenAI API (GPT-4o-mini model) to provide detailed insights and information about the texts entered by users. Through metrics such as word counts, sentence counts, paragraph counts, and other statistics, the service assists in evaluating and improving content.
+
+🎫Speedchars é uma ferramenta avançada de análise de texto que utiliza a API da OpenAI (modelo GPT-4o-mini) para fornecer análises detalhadas e informações relevantes sobre os textos inseridos pelos usuários. Por meio de métricas como contagem de palavras, frases, parágrafos e outras estatísticas, o serviço auxilia na avaliação e aprimoramento do conteúdo
+
+![App Screenshot](https://i.postimg.cc/NfyQyHYp/imagem-2025-02-17-232841051.png)
+
+## 🔧Status
+
+🚧 Em desenvolvimento | In development 🚧 - Beta Version
+
+## ✨ Features
+
+- 💫 Themes dark and light
+- 🤖 Improve Text With AI
+- 🧠 Analyzer Text With AI
+- 🔢 Count of textual elements
+
+## ♨️Instalation
+
+*🅰️ttention! The project uses NextJS, Supabase (to store user feedback and reports) and TypeScript, so it is essential to have the node on the machine for contributions.*
+
+➡️Install Speedchars with npm, yarn or pnpm:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/CarlosEduJs/Speedchars
+  cd Speedchars
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+➡️Install all dependencies (example with npm):
+```bash
+  npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+➡️Okay, now you can run the project on your machine, using (example with npm):
+```bash
+  npm run dev
+```
+    
+## 💻Technologies
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The following tools were used in building the project:
 
-## Learn More
+- [NextJS](https://nextjs.org/) 🌐
+- [Node.js](https://nodejs.org/en/) ⚡
+- [TypeScript](https://www.typescriptlang.org/) 📝
 
-To learn more about Next.js, take a look at the following resources:
+## 📢Feedback
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Please send me feedback if you can to: carloseduardogit@gmail.com or to speedchars.ofc@gmail.com
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 😎Autor
 
-## Deploy on Vercel
+- [@carlosedujs](https://github.com/CarlosEduJs)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
